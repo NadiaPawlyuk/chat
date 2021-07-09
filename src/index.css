@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.home{
+  width: 100vw;
+  height: 100vh;
+  background: #ccdbdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.homeh{
+margin: 0;
+padding: 0;
+margin-left: 130px;
+margin-bottom: 60px;
+color: #01152b;
+font-size: 50px;
+}
+
+.allchats{
+  width: 100vw;
+  height: 100vh;
+  background: #ccdbdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.createchat{
+  width: 100vw;
+  height: 100vh;
+  background: #ccdbdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.setting{
+  width: 100vw;
+  height: 100vh;
+  background: #ccdbdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.text{
+  margin: 0;
+  padding: 0;
+  margin-left: 130px;
+  margin-bottom: 500px;
+  color: #01152b;
+  font-size: 40px;
+}
+
+.li{
+  color: #ccdbdc;
+  margin-bottom: 10px;
+  align-items: center;
+  padding: 28px 0 0 0;
+}
+.li a{
+  text-decoration: none;
+}
+
+
+.li:hover{
+  color: #f4a261;
+
+}
