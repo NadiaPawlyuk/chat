@@ -1,6 +1,5 @@
 import React from 'react'
 import Item from './barItem'
-import {Link} from 'react-router-dom'
 
 let styles = {
     ul: {
@@ -15,9 +14,9 @@ let styles = {
     },
 
     div:{
-        width:'10vw',
-        height: '100vh',
-        background: '#003049',
+        width:'120px',
+        height: '100%',
+        background: '#293a4c',
         margin: 0,
         padding: 0,
         display: 'flex',

@@ -7,10 +7,8 @@ import '../index.css'
 
 export default function Item({item}){
     return(
-            
-           
-                <Link to={item.path}>
-                        <li className='li'>{item.icons}<br/><a>{item.title}</a></li>
+                <Link style={{textDecoration:"none"}} to={item.path}>
+                        <li className='li'>{item.icons}<br/>{item.title}</li>
                 </Link>
                
             

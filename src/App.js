@@ -19,16 +19,6 @@ let styles = {
       height: '100vh'
     },
 
-    h:{
-      margin: 0,
-      padding: 0,
-      position: 'absolute',
-      left: '27vw',
-      top: '38vh',
-      fontSize: '60px',
-      color:'#001219'
-    },
-
     img:{
       width:'40',
       height: '40'
@@ -53,8 +43,7 @@ function App() {
   return (
     <div style={styles.div}>
         <Router>
-          <SideBar items={items}>
-          </SideBar> 
+          <SideBar items={items}/>
           
           <Switch>
             <Route path='/' exact component={Home}></Route>

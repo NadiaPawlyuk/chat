@@ -1,12 +1,16 @@
 import React from 'react'
 import '../index.css'
+import ChatForm from '../CreateChat/createChatForm'
 
-function CreateChat(){
-    return (
-        <div className='createchat'>
-        <h1 className='text'>Створити чат</h1>
-        </div>
-    )
+class CreateChat extends React.Component{
+    render(){
+        return (
+            <div className='createchat'>
+                <ChatForm/>
+            </div>
+        )   
+    }
+    
 }
 
 export default CreateChat;

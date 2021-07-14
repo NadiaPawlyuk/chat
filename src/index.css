@@ -15,7 +15,7 @@ code {
 .home{
   width: 100vw;
   height: 100vh;
-  background: #ccdbdc;
+  background: #ffe8f7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,7 @@ font-size: 50px;
 .allchats{
   width: 100vw;
   height: 100vh;
-  background: #ccdbdc;
+  background: #fff2fb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,16 +43,189 @@ font-size: 50px;
   padding: 0;
 }
 
+
+
+
 .createchat{
   width: 100vw;
   height: 100vh;
-  background: #ccdbdc;
+  background: #fff0fa;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
 }
+
+.createChatForm{
+  margin-left: 100px;
+}
+
+.createChatLabel{
+  width: 650px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.createChatLabel label{
+  width: 180px;
+  font-size: 30px;
+  color: #01152b;
+  font-weight: 600;
+}
+
+.createChatLabel input{
+  margin-left: 40px;
+  width: 300px;
+  height: 36px;
+  box-shadow: 0px 0px 2px 1px #fff0fa;
+  font-size: 25px;
+  border: 2px solid #01152b;
+  border-radius: 50px;
+  padding: 0 20px;
+  outline: none;
+  background-color: #fff5fc;
+}
+
+.createChatLabel input:focus{
+  box-shadow: 0px 0px 2px 1px #262121;
+}
+
+.createChatButton{
+  width: 650px;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.createChatButton button{
+  width: 200px;
+  height: 50px;
+  margin-right: 42px;
+  background: #d17db8;
+  border: 2px solid #262121;
+  border-radius: 45px;
+  box-shadow: 0 0 4px 1px #fff0fa;
+  font-size: 30px;
+  color: #fff5fc;
+  font-weight: 540;
+}
+
+.createChatButton button:hover{
+  background: #a3177a;
+}
+
+.errorform{
+  width: 570px;
+  height: 240px;
+  background: #fffdf2;
+  right: 25%;
+  top:  -100%;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 3px solid #262121;
+  transition: .70s top;
+  border-radius: 50px 50px 50px 50px;
+}
+
+.errorform.active{
+  top: 2%;
+}
+
+
+.successfulform{
+  width: 570px;
+  height: 220px;
+  background: #fffdf2;
+  right: 25%;
+  top:  -100%;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #262121;
+  transition: .70s top;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.successfulform.active{
+  top: 2%;
+}
+
+.formMessageError{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  font-size: 34px;
+  color: #de002c;
+  
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #262121;
+  -webkit-text-stroke: 1px #a60000;
+}
+
+.formMessageSuccess{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  font-size: 40px;
+  color:#02a352;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #262121;
+  -webkit-text-stroke: 1px #016b36;
+}
+
+.createChatFormH{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 36%;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.createChatFormH h{
+  margin-bottom: 20px;
+}
+
+.createChatFormButton{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 24%;
+}
+
+.createChatFormButton button{
+  margin-bottom: 10px;
+  margin-right: 50px;
+  width: 100px;
+  height: 32px;
+  border: 2px solid #262121;
+  border-radius: 20px;
+}
+
+.successButton{
+  background: #02a352;
+  color: #fffdf2;
+}
+
+.errorButton{
+  background: #de002c;
+  color: #fffdf2;
+}
+
+
 .setting{
   width: 100vw;
   height: 100vh;
@@ -69,19 +242,17 @@ font-size: 50px;
   padding: 0;
   margin-left: 130px;
   margin-bottom: 500px;
-  color: #01152b;
+  color: #2b0101;
   font-size: 40px;
 }
 
 .li{
-  color: #ccdbdc;
+  color: #dcccd7;
   margin-bottom: 10px;
   align-items: center;
   padding: 28px 0 0 0;
 }
-.li a{
-  text-decoration: none;
-}
+
 
 
 .li:hover{
