@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import '../index.css'
 import stringify from 'qs-stringify'
+import {setSiteTheme} from "../redux/actions/index";
+import {connect} from 'react-redux';
 
 class CreateChatForm extends React.Component{
   constructor(props){
@@ -107,21 +109,21 @@ class CreateChatForm extends React.Component{
             <>
             <div className='createChatForm'>
 
-            <div className='createChatLabel'>
+            <div className={'createChatLabel-'+ this.props.theme.siteTheme}>
 
               <label className='labelChat'>Назва чату:</label>
               <input type="text" value={this.state.chatName} onChange={this.chatNameChanger} placeholder='Назва чату'/>
 
             </div>
 
-            <div className='createChatLabel'>
+            <div className={'createChatLabel-'+ this.props.theme.siteTheme}>
 
               <label className='labelUser'>Користувач:</label>
               <input type="text" value={this.state.userName} onChange={this.userNameChanger} placeholder='Ім’я користувача'/>
 
             </div>
 
-            <div className='createChatButton'>
+            <div className={'createChatButton-'+ this.props.theme.siteTheme}>
 
               <button onClick={this.validation}>Створити</button>
 
@@ -157,4 +159,12 @@ class CreateChatForm extends React.Component{
       }
 }
 
-export default CreateChatForm;
+const mapStateToProps = state => ({
+  theme: state.theme
+});
+
+const mapDispatchToProps = dispatch => ({
+  setSiteTheme: data => dispatch(setSiteTheme(data)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CreateChatForm);

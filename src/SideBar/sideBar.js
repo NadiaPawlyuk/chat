@@ -14,9 +14,9 @@ let styles = {
     },
 
     div:{
-        width:'120px',
+        width:'136px',
         height: '100%',
-        background: '#293a4c',
+        background: '#212226',
         margin: 0,
         padding: 0,
         display: 'flex',

@@ -8,6 +8,7 @@ import Home from './pages/home'
 import AllChats from './pages/allChats'
 import CreateChat from './pages/createChat'
 import Setting from './pages/settings'
+import LogReg from './pages/loginRegistration'
 
 let styles = {
    
@@ -34,10 +35,11 @@ function App() {
 
   
   const items = [
-    {id: 1, title: 'Головна', path: '/', icons:<AiIcons.AiOutlineHome style={styles.img}/>},
+    {id: 1, title: 'Головна', path: '/home', icons:<AiIcons.AiOutlineHome style={styles.img}/>},
     {id: 2, title: 'Усі чати', path: '/allchats', icons:<RiIcons.RiWechatLine style={styles.img2}/>},
     {id: 3, title: 'Створити чат', path: '/createchat', icons:<RiIcons.RiChat3Line style={styles.img}/>},
-    {id: 4, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting style={styles.img}/>}
+    {id: 4, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting style={styles.img}/>},
+    {id: 5, title: 'Увійти/Зареєструватися', path: '/', icons:<RiIcons.RiAccountBoxLine style={styles.img}/>}
   ]
 
   return (
@@ -46,10 +48,11 @@ function App() {
           <SideBar items={items}/>
           
           <Switch>
-            <Route path='/' exact component={Home}></Route>
+            <Route path='/home' exact component={Home}></Route>
             <Route path='/allchats' component={AllChats}></Route>
             <Route path='/createchat' component={CreateChat}></Route>
             <Route path='/settings' component={Setting}></Route>
+            <Route path='/' component={LogReg}></Route>
           </Switch>
         </Router>
         

@@ -1,0 +1,1 @@
+export const SET_SITE_THEME = "SET_SITE_THEME"
