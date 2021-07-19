@@ -9,6 +9,7 @@ import AllChats from './pages/allChats'
 import CreateChat from './pages/createChat'
 import Setting from './pages/settings'
 import LogReg from './pages/loginRegistration'
+import {useSelector} from 'react-redux'
 
 let styles = {
    
@@ -33,15 +34,26 @@ let styles = {
 
 function App() {
 
-  
-  const items = [
+  const id  =  useSelector(state => state.login.stateUserId);
+  let items = []
+
+  if(id){
+    items = [
+      {id: 1, title: 'Головна', path: '/home', icons:<AiIcons.AiOutlineHome style={styles.img}/>},
+      {id: 2, title: 'Усі чати', path: '/allchats', icons:<RiIcons.RiWechatLine style={styles.img2}/>},
+      {id: 3, title: 'Створити чат', path: '/createchat', icons:<RiIcons.RiChat3Line style={styles.img}/>},
+      {id: 4, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting style={styles.img}/>}
+    ]
+  }
+  else{
+    items = [
     {id: 1, title: 'Головна', path: '/home', icons:<AiIcons.AiOutlineHome style={styles.img}/>},
-    {id: 2, title: 'Усі чати', path: '/allchats', icons:<RiIcons.RiWechatLine style={styles.img2}/>},
-    {id: 3, title: 'Створити чат', path: '/createchat', icons:<RiIcons.RiChat3Line style={styles.img}/>},
-    {id: 4, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting style={styles.img}/>},
-    {id: 5, title: 'Увійти/Зареєструватися', path: '/', icons:<RiIcons.RiAccountBoxLine style={styles.img}/>}
+    {id: 2, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting style={styles.img}/>},
+    {id: 3, title: 'Увійти/Зареєструватися', path: '/', icons:<RiIcons.RiAccountBoxLine style={styles.img}/>}
   ]
 
+  }
+  
   return (
     <div style={styles.div}>
         <Router>

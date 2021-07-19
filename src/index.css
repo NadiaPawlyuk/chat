@@ -188,34 +188,34 @@ font-size: 50px;
   width: 200px;
   height: 50px;
   margin-right: 42px;
-  background: #327cfa;
+  background: #4e545c;
   font-weight: 540;
   font-size: 26px;
-  border: 2px solid #01152b;
+  border: 2px solid #030f1c;
   border-radius: 50px;
   color: #e7ecf0;
-  -webkit-text-stroke: 0.3px #01152b;
+  -webkit-text-stroke: 0.3px #030f1c;
 }
 
 .createChatButton-dark button{
   width: 200px;
   height: 50px;
   margin-right: 42px;
-  background: #2b5279;
+  background: #4e545c;
   font-weight: 540;
   font-size: 26px;
-  border: 2px solid #0d1925;
+  border: 2px solid #030f1c;
   border-radius: 50px;
   color: #e7ecf0;
-  -webkit-text-stroke: 0.3px #01152b;
+  -webkit-text-stroke: 0.3px #030f1c;
 }
 
 .createChatButton-light button:hover{
-  background: #044fcf;
+  background: #6c7887;
 }
 
 .createChatButton-dark button:hover{
-  background: #0e4882;
+  background: #6c7887;
 }
 
 .errorform{
@@ -330,6 +330,7 @@ font-size: 50px;
   height: 100vh;
   background: #fafafc;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -342,10 +343,37 @@ font-size: 50px;
   height: 100vh;
   background: #363940;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
+}
+
+.logout{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 12px;
+  margin-right: 18px;
+} 
+
+.logout button{
+  width: 150px;
+  height: 38px;
+  margin-right: 42px;
+  background: #4e545c;
+  font-weight: 540;
+  font-size: 26px;
+  border: 2px solid #030f1c;
+  border-radius: 50px;
+  color: #e7ecf0;
+  -webkit-text-stroke: 0.3px #030f1c;
+}
+
+.logout button:hover{
+  background: #6c7887;
 }
 
 .themeChange{
@@ -354,6 +382,7 @@ font-size: 50px;
   align-items: center;
   width: 100vw;
   height: 100vh;
+  margin-bottom: 100px;
 }
 
 .dark-light{
@@ -429,4 +458,194 @@ font-size: 50px;
 .li:hover{
   color: #f4a261;
 
+}
+
+
+.login{
+  width: 470px;
+  height: 300px;
+}
+
+.registration{
+  width: 470px;
+  height: 300px;
+}
+
+.logReg-light{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafc;
+}
+
+.logReg-dark{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #363940;
+}
+
+
+.logReg-light label{
+  font-size: 26px;
+  color: #01152b;
+  font-weight: 600;
+}
+
+.logReg-dark label{ 
+  font-size: 26px;
+  color: #c1c1c9;
+  font-weight: 600;
+}
+
+.logRegLabel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  margin-top: 34px;
+}
+
+.logReg-light input{
+  width: 200px;
+  height: 36px;
+  box-shadow: 0px 0px 2px 1px #fff0fa;
+  font-size: 25px;
+  border: 2px solid #01152b;
+  border-radius: 50px;
+  padding: 0 20px;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.logReg-dark input{
+  width: 200px;
+  height: 36px;
+  box-shadow: 0px 0px 2px 1px #25272c;
+  font-size: 25px;
+  border: 2px solid #01152b;
+  border-radius: 50px;
+  padding: 0 20px;
+  outline: none;
+  background-color: #d3cdcd;
+}
+
+.logReg-dark input::placeholder{
+  color: #363940;
+}
+
+.logReg-light input:focus{
+  box-shadow: 0px 0px 2px 1px #262121;
+}
+
+.logReg-dark input:focus{
+  box-shadow: 0px 0px 8px 3px #110f0f;
+}
+
+.logRegLabelButton{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.logRegLabelButton button{
+  width: 180px;
+  height: 38px;
+  background: #4e545c;
+  font-weight: 540;
+  font-size: 26px;
+  border: 2px solid #030f1c;
+  border-radius: 50px;
+  color: #e7ecf0;
+  -webkit-text-stroke: 0.3px #030f1c;
+}
+
+.logRegLabelButton button:hover{
+  background: #6c7887;
+}
+
+.RegLabelButton{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.RegLabelButton button{
+  width: 220px;
+  height: 38px;
+  background: #4e545c;
+  font-weight: 540;
+  font-size: 26px;
+  border: 2px solid #030f1c;
+  border-radius: 50px;
+  color: #e7ecf0;
+  -webkit-text-stroke: 0.3px #030f1c;
+}
+
+.RegLabelButton button:hover{
+  background: #6c7887;
+}
+
+.logRegButton-light{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #030f1c;
+  font-size: 16px;
+}
+
+.logRegButton-light button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #030f1c; 
+  font-size: 15px;
+}
+
+.logRegButton-light button:hover{
+  color: #07468a; 
+}
+
+.logRegButton-dark{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c1c1c9;
+  font-size: 16px;
+}
+
+.logRegButton-dark button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #c1c1c9; 
+  font-size: 15px;
+}
+
+.logRegButton-dark button:hover{
+  color: #fffbfb;
+}
+
+.login-disable{
+  display: none;
+}
+
+.registration-disable{
+  display: none;
 }

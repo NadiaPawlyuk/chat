@@ -4,14 +4,14 @@ import '../index.css'
 import stringify from 'qs-stringify'
 import {setSiteTheme} from "../redux/actions/index";
 import {connect} from 'react-redux';
+import {setLogin} from "../redux/actions/index";
 
 class CreateChatForm extends React.Component{
   constructor(props){
     super(props);
 
-    this.state ={chatName:'', userName:'', errorBool: false, successesBool: false, errorName: '', chatNameMessage:'', userNameMessage:''}
+    this.state ={chatName:'', errorBool: false, successesBool: false, errorName: '', chatNameMessage:''}
     this.chatNameChanger = this.chatNameChanger.bind(this);
-    this.userNameChanger = this.userNameChanger.bind(this);
     this.setError = this.setError.bind(this);
     this.setSuccesses = this.setSuccesses.bind(this);
     this.validation = this.validation.bind(this);
@@ -23,12 +23,6 @@ class CreateChatForm extends React.Component{
     this.setState({chatName: event.target.value});
   }
   
-  userNameChanger(event) {
-  
-    this.setState({userName: event.target.value});
-  
-  }
-  
   setError(){
     this.setState({errorBool: false});
   }
@@ -38,17 +32,12 @@ class CreateChatForm extends React.Component{
   }
 
   validation(){
-    let userName = this.state.userName;
     let chatName = this.state.chatName;
 
     let error = '';
     let errorBool = false;
 
-    if(!userName){
-      error = error + ' «Ім’я користувача» не може бути порожнім.';
-      errorBool = true;
-    }
-    if(!chatName){
+     if(!chatName){
       error = error + ' «Ім’я чату» не може бути порожнім.';
       errorBool = true;
     }
@@ -62,13 +51,12 @@ class CreateChatForm extends React.Component{
       this.setState({successesBool: false});
     }
     if(!errorBool){
-      this.createChate(this.state.userName, this.state.chatName);
-      this.setState({userNameMessage: this.state.userName});
+      this.createChate(this.state.chatName);
       this.setState({chatNameMessage: this.state.chatName});
     }
   }
 
-  async createChate(user_id, name) {
+  async createChate(name) {
 
     let current = this
 
@@ -76,12 +64,12 @@ class CreateChatForm extends React.Component{
         method: 'post',
         url: "https://chat.vallsoft.com/api/chats/create-chat" ,
         data: stringify({
-         user_id: user_id, 
-         name: name
+          user_id: this.props.login.stateUserId, 
+          name: name
         }),
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-          'Authorization': 'BpvgI5T7EynnaDjDOqa7AT-gfjQNDhgM',
+          'Authorization': this.props.login.stateUserToken,
         }
     }).then(function (response) {
         if (response.data !== '' && response.data.constructor === Object) {  
@@ -103,7 +91,6 @@ class CreateChatForm extends React.Component{
 
   } 
 
-
       render(){
           return(
             <>
@@ -113,13 +100,6 @@ class CreateChatForm extends React.Component{
 
               <label className='labelChat'>Назва чату:</label>
               <input type="text" value={this.state.chatName} onChange={this.chatNameChanger} placeholder='Назва чату'/>
-
-            </div>
-
-            <div className={'createChatLabel-'+ this.props.theme.siteTheme}>
-
-              <label className='labelUser'>Користувач:</label>
-              <input type="text" value={this.state.userName} onChange={this.userNameChanger} placeholder='Ім’я користувача'/>
 
             </div>
 
@@ -147,7 +127,7 @@ class CreateChatForm extends React.Component{
 
             <div className='createChatFormH'>
 
-              <h>Чат з ім’ям <em>{this.state.chatNameMessage}</em> успішно створений <br/> коистувачем <em>{this.state.userNameMessage}</em></h>
+              <h>Чат з ім’ям <em>{this.state.chatNameMessage}</em> успішно створений <br/> коистувачем <em>{this.props.login.stateUserId}</em></h>
 
             </div>
 
@@ -160,11 +140,13 @@ class CreateChatForm extends React.Component{
 }
 
 const mapStateToProps = state => ({
-  theme: state.theme
+  theme: state.theme,
+  login: state.login
 });
 
 const mapDispatchToProps = dispatch => ({
   setSiteTheme: data => dispatch(setSiteTheme(data)),
+  setLogin: data => dispatch(setLogin(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateChatForm);
