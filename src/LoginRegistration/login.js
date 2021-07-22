@@ -19,6 +19,10 @@ function Login(){
 
     const id  =  useSelector(state => state.login.stateUserId);
 
+    const [errorBool, setErrorBool] = useState(false);
+    
+    const [errorName, setErrorName] = useState('');
+
     function setUserNameChange(event){
         setUserName(event.target.value);
     }
@@ -28,7 +32,33 @@ function Login(){
     }
 
     function LoginValidation(){
-        login(userName, password)
+        var error = '';
+        var bool = false;
+        var userNameValidation = userName;
+        var passwordValidation = password; 
+
+        if(!userNameValidation){
+            bool = true;
+            error = error + " Логін не вказано." 
+        }
+
+        if(!passwordValidation){
+            bool = true;
+            error = error + " Пароль не вказано.";
+        }
+
+        if(bool){
+            setErrorBool(true);
+            setErrorName(error);
+        }
+
+        if(!bool){
+            login(userName, password)
+        }
+    }
+
+    function setBool() {
+        setErrorBool(false)
     }
 
     async function login(username, password) {
@@ -55,7 +85,8 @@ function Login(){
                     console.log(localStorage.getItem('user_token'));
                 }
                 else{
-                  console.log(event.message)
+                  setErrorBool(true);
+                  setErrorName(" Неправильний логін або пароль.");
                 }
             }
         }).catch(function (error) {
@@ -85,10 +116,14 @@ function Login(){
             </div>
 
             <div className='logRegLabelButton'>
-
                 <button onClick={LoginValidation}>Увійти</button>
-
             </div>
+
+            <nav className={errorBool ? 'errorform active' : 'errorform'}>
+              <div className='formMessageError'><h>Помилка</h></div>
+              <div className='createChatFormH'><h>{errorName}</h></div>
+              <div className='createChatFormButton'><button className='errorButton' onClick={setBool}>Закрити</button></div>
+            </nav>
         </div>
             
     )

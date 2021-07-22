@@ -21,6 +21,10 @@ function Registration(){
 
     const id  =  useSelector(state => state.login.stateUserId);
     
+    const [errorBool, setErrorBool] = useState(false);
+    
+    const [errorName, setErrorName] = useState('');
+
     function setUserNameChange(event){
         setUserName(event.target.value);
     }
@@ -34,9 +38,40 @@ function Registration(){
     }
 
     function RegistrationValidation(){
-        register(userName, name, password)
+        var error = '';
+        var bool = false;
+        var userNameValidation = userName;
+        var nameValidation = name;
+        var passwordValidation = password; 
+
+        if(!userNameValidation){
+            bool = true;
+            error = error + " Логін не вказано." 
+        }
+
+        if(!nameValidation){
+            bool = true;
+            error = error + " Ім'я користувача не вказано." 
+        }
+        if(!passwordValidation){
+            bool = true;
+            error = error + " Пароль не вказано.";
+        }
+
+        if(bool){
+            setErrorBool(true);
+            setErrorName(error);
+        }
+
+        if(!bool){
+            register(userName, name, password)
+        }
     }
-    
+
+    function setBool() {
+        setErrorBool(false)
+    }
+
     async function register(username, name, password) {
   
         await axios({
@@ -62,7 +97,8 @@ function Registration(){
                     console.log(localStorage.getItem('user_token'));
                 }
                 else{
-                  console.log(event.message)
+                    setErrorBool(true);
+                    setErrorName(event.message);
                 }
             }
         }).catch(function (error) {
@@ -104,6 +140,12 @@ function Registration(){
                 <button onClick={RegistrationValidation}>Реєстрація</button>
 
             </div>
+
+            <nav className={errorBool ? 'errorform active' : 'errorform'}>
+              <div className='formMessageError'><h>Помилка</h></div>
+              <div className='createChatFormH'><h>{errorName}</h></div>
+              <div className='createChatFormButton'><button className='errorButton' onClick={setBool}>Закрити</button></div>
+            </nav>
         </div>
             
     )

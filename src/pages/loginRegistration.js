@@ -10,19 +10,19 @@ function LoginRegistration(){
 
     const [logReg, setLogReg] = useState(false);
 
-    const [text, setText] = useState('Увійти');
+    const [text, setText] = useState('Реєстрація');
 
-    const [message, setMessage] = useState('У вас вже є акаунт?');
+    const [message, setMessage] = useState('У вас немає акаунта?');
 
     function loginRegistration(){
 
         setLogReg(!logReg);
 
-        if(!logReg){
+        if(logReg){
             setText('Реєстрація');
             setMessage('У вас немає акаунта?');
         }
-        if(logReg){
+        if(!logReg){
             setText('Увійти');
             setMessage('У вас вже є акаунт?');
         }

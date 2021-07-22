@@ -19,6 +19,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -30,6 +31,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -38,18 +40,28 @@ code {
 margin: 0;
 padding: 0;
 margin-left: 130px;
-margin-bottom: 60px;
 color: #363940;
 font-size: 50px;
+}
+
+.h2-light{
+  margin-left: 130px;
+  color: #363940;
+  font-size: 50px;
 }
 
 .homeH-dark{
   margin: 0;
   padding: 0;
   margin-left: 130px;
-  margin-bottom: 60px;
   color: #aeb8c2;
   font-size: 50px;
+  }
+
+  .h2-dark{
+    margin-left: 130px;
+    color: #aeb8c2;
+    font-size: 50px;
   }
 
 .allchats-light{
@@ -134,9 +146,9 @@ font-size: 50px;
   margin-left: 40px;
   width: 300px;
   height: 36px;
-  box-shadow: 0px 0px 2px 1px #fff0fa;
+  box-shadow: 0px 0px 3px 3px #a9a9af;
   font-size: 25px;
-  border: 2px solid #01152b;
+  border: 0px solid #01152b;
   border-radius: 50px;
   padding: 0 20px;
   outline: none;
@@ -149,7 +161,7 @@ font-size: 50px;
   height: 36px;
   box-shadow: 0px 0px 2px 1px #25272c;
   font-size: 25px;
-  border: 2px solid #01152b;
+  border: 0px solid #01152b;
   border-radius: 50px;
   padding: 0 20px;
   outline: none;
@@ -161,7 +173,7 @@ font-size: 50px;
 }
 
 .createChatLabel-light input:focus{
-  box-shadow: 0px 0px 2px 1px #262121;
+  box-shadow: 0px 0px 2px 2px #262121;
 }
 
 .createChatLabel-dark input:focus{
@@ -191,7 +203,7 @@ font-size: 50px;
   background: #4e545c;
   font-weight: 540;
   font-size: 26px;
-  border: 2px solid #030f1c;
+  border: 0px solid #030f1c;
   border-radius: 50px;
   color: #e7ecf0;
   -webkit-text-stroke: 0.3px #030f1c;
@@ -204,30 +216,32 @@ font-size: 50px;
   background: #4e545c;
   font-weight: 540;
   font-size: 26px;
-  border: 2px solid #030f1c;
+  border: 0px solid #303136;
   border-radius: 50px;
   color: #e7ecf0;
-  -webkit-text-stroke: 0.3px #030f1c;
+  box-shadow: 3px 3px 3px #303136;
 }
 
 .createChatButton-light button:hover{
   background: #6c7887;
+  box-shadow: 6px 6px 6px #110f0f;
 }
 
 .createChatButton-dark button:hover{
   background: #6c7887;
+  box-shadow: 4px 4px 4px #110f0f;
 }
 
 .errorform{
   width: 570px;
   height: 240px;
-  background: #fffdf2;
+  background: #d3cdcd;
   right: 25%;
   top:  -100%;
   position: fixed;
   margin: 0;
   padding: 0;
-  border: 3px solid #262121;
+  border: 1px solid #262121;
   transition: .70s top;
   border-radius: 50px 50px 50px 50px;
 }
@@ -240,13 +254,13 @@ font-size: 50px;
 .successfulform{
   width: 570px;
   height: 220px;
-  background: #fffdf2;
+  background: #d3cdcd;
   right: 25%;
   top:  -100%;
   position: fixed;
   margin: 0;
   padding: 0;
-  border: 2px solid #262121;
+  border: 1px solid #262121;
   transition: .70s top;
   border-radius: 30px 30px 30px 30px;
 }
@@ -310,17 +324,22 @@ font-size: 50px;
   margin-right: 50px;
   width: 100px;
   height: 32px;
-  border: 2px solid #262121;
+  border: 0px solid #262121;
   border-radius: 20px;
 }
 
+.createChatFormButton button:hover{
+  background: #5c616e;
+  box-shadow: 1px 2px 2px #110f0f;
+  
+}
 .successButton{
-  background: #02a352;
+  background: #363940;
   color: #fffdf2;
 }
 
 .errorButton{
-  background: #de002c;
+  background: #363940;
   color: #fffdf2;
 }
 
@@ -366,7 +385,7 @@ font-size: 50px;
   background: #4e545c;
   font-weight: 540;
   font-size: 26px;
-  border: 2px solid #030f1c;
+  border: 0px solid #030f1c;
   border-radius: 50px;
   color: #e7ecf0;
   -webkit-text-stroke: 0.3px #030f1c;
@@ -374,6 +393,7 @@ font-size: 50px;
 
 .logout button:hover{
   background: #6c7887;
+  box-shadow: 2px 2px 2px #110f0f;
 }
 
 .themeChange{
@@ -515,7 +535,7 @@ font-size: 50px;
   height: 36px;
   box-shadow: 0px 0px 2px 1px #fff0fa;
   font-size: 25px;
-  border: 2px solid #01152b;
+  border: 0px solid #01152b;
   border-radius: 50px;
   padding: 0 20px;
   outline: none;
@@ -527,7 +547,7 @@ font-size: 50px;
   height: 36px;
   box-shadow: 0px 0px 2px 1px #25272c;
   font-size: 25px;
-  border: 2px solid #01152b;
+  border: 0px solid #01152b;
   border-radius: 50px;
   padding: 0 20px;
   outline: none;
@@ -560,7 +580,7 @@ font-size: 50px;
   background: #4e545c;
   font-weight: 540;
   font-size: 26px;
-  border: 2px solid #030f1c;
+  border: 0px solid #030f1c;
   border-radius: 50px;
   color: #e7ecf0;
   -webkit-text-stroke: 0.3px #030f1c;
@@ -584,7 +604,7 @@ font-size: 50px;
   background: #4e545c;
   font-weight: 540;
   font-size: 26px;
-  border: 2px solid #030f1c;
+  border: 0px solid #030f1c;
   border-radius: 50px;
   color: #e7ecf0;
   -webkit-text-stroke: 0.3px #030f1c;
@@ -648,4 +668,396 @@ font-size: 50px;
 
 .registration-disable{
   display: none;
+}
+
+.openChat{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #c1c1c9;
+}
+
+.chatlistItem{
+  width: 100%;
+  height: 45px;
+  background: #363940;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border: 0px solid #363940;
+  border-radius: 10px;
+}
+
+.chatlistItem h{
+  font-size: 17px;
+}
+
+.chatlistItem:hover{
+  background: #565a63;
+}
+
+.chatListSide-light{
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #a3a3a3;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chatListSide-dark{
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #303136;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.actionButton{
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c1c1c9;
+}
+
+.actionsBlock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addUsersChat{
+  width: 20px;
+  height: 20px;
+}
+.leaveChat{
+  width: 23px;
+  height: 23px;
+}
+.deleteChat{
+  width: 22px;
+  height: 22px;
+}
+
+.addUsersChat:hover{
+  color: #fafafc;
+}
+.leaveChat:hover{
+  color: #fafafc;
+}
+.deleteChat:hover{
+  color: #fafafc;
+}
+
+.chatListSideBlock{
+  width: 330px;
+  margin-top: 40px;
+}
+
+.addusers{
+  display: none;
+}
+
+.addusers-active{
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addusers-active input{
+  width: 74%;
+  height: 70%;
+  background: #c1c1c9;
+  border: 0px solid rgb(36, 34, 34);
+  border-radius: 10px 0px 0px 10px;
+  outline: none;
+  padding-left: 20px;
+}
+
+.addusers-active input:focus{
+  box-shadow: #1b1c1f 2px 2px 7px;
+}
+
+.addusers-active button{
+  width: 26%;
+  height: 44px;
+  border: 0px solid #1b1c1f;
+  border-radius: 0px 10px 10px 0px;
+  background: #8b8b92;
+  font-family: 'Verdana';
+}
+
+.addusers-active button:hover{
+  background: #656569;
+}
+
+.leaveButton{
+  display: none;
+}
+
+.leaveButton-active{
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaveButton-active button{
+  width: 45%;
+  height: 100%;
+  border: 0px solid black;
+  border-radius: 10px;
+  box-shadow: rgba(230, 231, 238, 0.4) 1px 1px 4px;
+  background: #303136;
+  color: #c1c1c9;
+}
+
+.leaveButton-active button:hover{
+  box-shadow: rgba(10, 10, 14, 0.9) 3px 3px 12px;
+}
+
+.leaveusers{
+  display: none;
+}
+
+.leaveusers-active{
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaveusers-active input{
+  width: 74%;
+  height: 70%;
+  background: #c1c1c9;
+  border: 0px solid rgb(36, 34, 34);
+  border-radius: 10px 0px 0px 10px;
+  outline: none;
+  padding-left: 20px;
+}
+
+.leaveusers-active input:focus{
+  box-shadow: #1b1c1f 2px 2px 7px;
+}
+
+.leaveusers-active button{
+  width: 26%;
+  height: 44px;
+  border: 0px solid #1b1c1f;
+  border-radius: 0px 10px 10px 0px;
+  background: #8b8b92;
+  font-family: 'Verdana';
+}
+
+.leaveusers-active button:hover{
+  background: #656569;
+}
+
+.chatlist-dark{
+  width:100vw;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #363940;
+  display: flex;
+  margin-left: 136px;
+}
+
+.chatlist-light{
+  width:100vw;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #fafafc;
+  display: flex;
+  margin-left: 136px;
+}
+
+
+.messageForm{
+  width: 700px;
+  height: 100%;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.messages{
+  width: 100%;
+  height: 90%;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+  background: none;
+}
+
+::-webkit-scrollbar-track{
+  background: none;
+}
+
+::-webkit-scrollbar-thumb{
+  background: none;
+}
+
+.messageWrite{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.messageWrite input{
+  width: 70%;
+  height: 70%;
+  border: 0px solid black;
+  border-radius: 10px;
+  padding-right: 20px;
+  outline: none;
+  padding-left: 30px;
+  background: #c1c1c9;
+  color: #303136;
+  font-family: 'Arial';
+  font-size: 15px;
+}
+
+.messageWrite input:focus{
+  box-shadow: #1b1c1f 2px 2px 7px;
+}
+
+.messageWrite input::placeholder{
+  color: black;
+}
+
+.messageWrite button{
+  width: 20%;
+  height: 75%;
+  border: 0px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  background: #c1c1c9;
+}
+
+.messageWrite button:hover{
+  box-shadow: rgba(10, 10, 14, 0.9) 3px 3px 12px;
+}
+
+.myMessage{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  color: #01152b;
+}
+
+.myMessageBox-dark{
+  width: 80%;
+  background: #2b5279;
+  border: 0px solid black;
+  border-radius: 10px 10px 0px 10px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #e7ecf0;
+}
+
+.myMessageBox-light{
+  width: 80%;
+  background: #c2c2c2;
+  border: 0px solid black;
+  border-radius: 10px 10px 0px 10px;
+  min-height: 50px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.myMessageBox-dark h{
+  display: none;
+}
+
+.myMessageBox-light h{
+  display: none;
+}
+
+.otherMessage{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.otherMessageBox-dark{
+  width: 80%;
+  background: #203b57;
+  border: 0px solid black;
+  border-radius: 10px 10px 10px 0px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #e7ecf0;
+}
+
+.otherMessageBox-light{
+  width: 80%;
+  background: #2691ff;
+  border: 0px solid black;
+  border-radius: 10px 10px 10px 0px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #1a1616;
+}
+
+.otherMessageBox-dark h{
+  margin-left: 20px;
+}
+
+.otherMessageBox-light h{
+  margin-left: 20px;
+}
+
+.messageText{
+  margin-left: 20px;
+}
+
+.messageText h{
+  display: flex;
+  margin-left: 0px;
 }
