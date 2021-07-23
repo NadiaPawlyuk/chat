@@ -10,6 +10,7 @@ import CreateChat from './pages/createChat'
 import Setting from './pages/settings'
 import LogReg from './pages/loginRegistration'
 import {useSelector} from 'react-redux'
+import "./index.css"
 
 let styles = {
    
@@ -19,16 +20,6 @@ let styles = {
       padding: 0,
       width:'100vw',
       height: '100vh'
-    },
-
-    img:{
-      width:'40',
-      height: '40'
-    },
-
-    img2:{
-      width:'47',
-      height: '47'
     }
 }
 
@@ -39,17 +30,17 @@ function App() {
 
   if(id){
     items = [
-      {id: 1, title: 'Головна', path: '/home', icons:<AiIcons.AiOutlineHome style={styles.img}/>},
-      {id: 2, title: 'Усі чати', path: '/allchats', icons:<RiIcons.RiWechatLine style={styles.img2}/>},
-      {id: 3, title: 'Створити чат', path: '/createchat', icons:<RiIcons.RiChat3Line style={styles.img}/>},
-      {id: 4, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting style={styles.img}/>}
+      {id: 1, title: 'Головна', path: '/home', icons:<AiIcons.AiOutlineHome className="img"/>},
+      {id: 2, title: 'Усі чати', path: '/allchats', icons:<RiIcons.RiWechatLine className='img2'/>},
+      {id: 3, title: 'Створити чат', path: '/createchat', icons:<RiIcons.RiChat3Line className='img'/>},
+      {id: 4, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting className='img'/>}
     ]
   }
   else{
     items = [
-    {id: 1, title: 'Головна', path: '/home', icons:<AiIcons.AiOutlineHome style={styles.img}/>},
-    {id: 2, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting style={styles.img}/>},
-    {id: 3, title: 'Увійти/Зареєструватися', path: '/', icons:<RiIcons.RiAccountBoxLine style={styles.img}/>}
+    {id: 1, title: 'Головна', path: '/home', icons:<AiIcons.AiOutlineHome className='img'/>},
+    {id: 2, title: 'Налаштування', path: '/settings', icons:<AiIcons.AiOutlineSetting className='img'/>},
+    {id: 3, title: 'Увійти/Зареєструватися', path: '/', icons:<RiIcons.RiAccountBoxLine className='img'/>}
   ]
 
   }

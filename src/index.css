@@ -427,16 +427,6 @@ font-size: 50px;
   display: none;
 }
 
-.light-dark{
-  font-size: 30px; 
-  width: 250px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 40px;
-}
-
 .ligthThemeH{
   color: #aeb8c2;
   font-weight: 600;
@@ -445,6 +435,16 @@ font-size: 50px;
 .darkThemeH{
   color: #363940;
   font-weight: 600;
+}
+
+.light-dark{
+  font-size: 30px; 
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
 }
 
 .light-dark button{
@@ -1060,4 +1060,548 @@ font-size: 50px;
 .messageText h{
   display: flex;
   margin-left: 0px;
+}
+
+.sideBar{
+  width:136px;
+  height: 100vh;
+  background: #212226;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.img{
+  width: 40px;
+  height: 40px;
+}
+
+.img2{
+  width:47px;
+  height: 47px;
+}
+
+@media screen and (max-width: 992px) { 
+  .sideBar{
+    width:120px;
+  }
+
+  .img{
+    width: 53px;
+    height: 53px;
+  }
+
+  .img2{
+    width: 65px;
+    height: 65px;
+  }
+
+  .itemH{
+    display: none;
+  }
+
+  .homeH-dark{
+    margin-right: 54px;
+    font-size: 45px;
+  }
+
+  .homeH-light{
+    margin-right: 54px;
+    font-size: 45px;
+  }
+
+  .h2-dark{
+    margin-right: 54px;
+  }
+
+  .h2-light{
+    margin-right: 54px;
+  }
+
+  .logout button{
+    width: 176px;
+    height: 55px;
+    margin-right: 60px;
+    font-size: 34px;
+  }
+
+    
+  .dark-light{
+    font-size: 46px; 
+    width: 350px;
+    height: 100px;
+    margin-bottom: 80px;
+  }
+
+  .dark-light button{
+    width: 70px;
+    height: 70px;
+    margin-top: 13px;
+  }
+    
+  .light-dark{
+    font-size: 46px; 
+    width: 350px;
+    height: 100px;
+    margin-bottom: 80px;
+  }
+
+  .light-dark button{
+    width: 70px;
+    height: 70px;
+    margin-top: 13px;
+  }
+    
+  .createChatLabel-light{
+    width: 600px;
+  }
+
+  .createChatLabel-dark{
+    width: 600px;
+  }
+
+  .createChatLabel-light input{
+    width: 250px;
+  }
+
+  .createChatLabel-dark input{
+    width: 250px;
+  }
+
+  .createChatButton-dark button{
+    margin-right: 95px;
+  }
+
+  .createChatButton-light button{
+    margin-right: 95px;
+  }
+  
+  .errorform{
+    width: 450px;
+    height: 170px;
+    right: 17%;
+  }
+
+  .successfulform{
+    width: 450px;
+    height: 170px;
+    right: 17%;
+  }
+
+  .login{
+    margin-left: 100px;
+  }
+
+  .logRegButton-dark{
+    margin-left: 100px;
+    font-size: 25px;
+  }
+
+  .logRegButton-dark button{
+    font-size: 23px;
+  }
+
+  .logRegButton-light{
+    margin-left: 100px;
+    font-size: 25px;
+  }
+
+  .logRegButton-light button{
+    font-size: 23px;
+  }
+
+  .registration{
+    margin-left: 100px;
+  }
+
+  .chatlist-dark{
+    margin-left: 120px;
+    height: 100vh;
+  }
+
+  .chatListSide-dark{
+    width: 250px;
+  }
+
+  .chatlist-light{
+    margin-left: 120px;
+    height: 100vh;
+  }
+
+  .chatListSide-light{
+    width: 250px;
+  }
+
+  .chatListSideBlock{
+    width: 220px;
+  }
+
+  .messageForm{
+    width: 280px;
+  }
+
+  .messageWrite input{
+    width: 65%;
+    height: 50%;
+    font-size: 15px;
+  } 
+  .messageWrite button{
+    width: 35%;
+    height: 53%;
+    font-size: 14px;
+  } 
+
+  .leaveusers-active button{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sideBar{
+    width: 50px;
+  }
+
+  .img{
+    width: 33px;
+    height: 33px;
+  }
+
+  .img2{
+    width: 39px;
+    height: 39px;
+  }
+
+  .itemH{
+    display: none;
+  }
+
+  .homeH-dark{
+    font-size: 25px;
+    margin-right: 100px;
+    text-align: center;
+  }
+
+  .homeH-light{
+    font-size: 25px;
+    margin-right: 100px;
+    text-align: center;
+  }
+
+  .h2-dark{
+    margin-right: 100px;
+    margin-bottom: 80px;
+    font-size: 26px;
+  }
+
+  .h2-light{
+    margin-right: 100px;
+    margin-bottom: 80px;
+    font-size: 26px;
+  }
+
+  .logout button{
+    width: 100px;
+    height: 39px;
+    margin-right: 8px;
+    font-size: 22px;
+  }
+    
+  .dark-light{
+    font-size: 26px; 
+    width: 220px;
+    height: 70px;
+    margin-bottom: 50px;
+  }
+
+  .dark-light button{
+    width: 50px;
+    height: 50px;
+    margin-top: 11px;
+  }
+    
+  .light-dark{
+    font-size: 26px; 
+    width: 220px;
+    height: 70px;
+    margin-bottom: 50px;
+  }
+
+  .light-dark button{
+    width: 50px;
+    height: 50px;
+    margin-top: 11px;
+  }
+    
+  .createChatLabel-light{
+    width: 100%;
+  }
+
+  .createChatLabel-dark{
+    width: 100%;
+
+  }
+
+  .createChatLabel-dark label{
+    width: 50px;
+    font-size: 20px;
+  }
+
+  .createChatLabel-light label{
+    width: 50px;
+    font-size: 20px;
+  }
+
+  .createChatLabel-light input{
+    width: 105px;
+    font-size: 20px;
+    margin-right: 50px;
+  }
+
+  .createChatLabel-dark input{
+    width: 105px;
+    font-size: 20px;
+    margin-right: 50px;
+  }
+
+  .createChatButton-dark{
+    width: 100%;
+  }
+  .createChatButton-light{
+    width: 100%;
+  }
+  .createChatButton-dark button{
+    margin-right: 48px;
+    width: 120px;
+    height: 46px;
+    font-size: 21px;
+  }
+
+  .createChatButton-light button{
+    margin-right: 48px;
+    width: 120px;
+    height: 46px;
+    font-size: 21px;
+  }
+  
+  .errorform{
+    width: 225px;
+    height: 200px;
+    right: 25%;
+  }
+
+  .createChatFormH{
+    font-size: 16px;
+  }
+  
+  .formMessageError{
+    font-size: 25px;
+  }
+
+  .successfulform{
+    width: 225px;
+    height: 200px;
+    right: 25%;
+  }
+
+  .formMessageSuccess{
+    font-size: 25px;
+  }
+
+  .login{
+    width: 200px;
+    margin-left: 30px;
+  }
+
+  .registration{
+    width: 200px;
+    margin-left: 11px;
+  }
+
+  .logReg-dark label{ 
+    width: 50px;
+    font-size: 20px;
+  }
+
+  .logRegLabel input{
+    width: 120px;
+    height: 28px;
+    margin-right: 130px;
+    font-size: 14px;
+  }
+  .logRegButton-dark{
+    margin-left: 50px;
+    font-size: 14px;
+  }
+
+  .logRegLabelButton{
+    width: 100%;
+  }
+
+  .logRegLabelButton button{
+    width: 130px;
+    height: 28px;
+    font-size: 20px;
+    margin-left: 60px;
+  }
+
+  .RegLabelButton{
+    width: 100%;
+  }
+
+  .RegLabelButton button{
+    width: 130px;
+    height: 28px;
+    font-size: 20px;
+    margin-left: 60px;
+  }
+
+  .logRegButton-dark button{
+    font-size: 13px;
+  }
+
+  .logRegButton-light{
+    margin-left: 50px;
+    font-size: 14px;
+  }
+
+  .logRegButton-light button{
+    font-size: 13px;
+  }
+
+  .messageForm{
+    width: 200px;
+  }
+
+  .messageWrite input{
+    width: 66%;
+    font-size: 15px;
+    height: 38%;
+  }
+
+  .messageWrite button{
+    width: 28%;
+    height: 40%;
+    font-size: 10px;
+  }
+
+  .myMessageBox-light{
+    font-size: 15px;
+  }
+
+  .myMessageBox-dark{
+    font-size: 15px;
+  }
+
+  .otherMessageBox-light{
+    font-size: 15px;
+  }
+
+  .otherMessageBox-dark{
+    font-size: 15px;
+  }
+  .chatlistlist-dark{
+    width: 50px;
+  }
+
+  .chatlistlist-light{
+    width: 50px;
+  }
+
+  .chatlistlistblock{
+    width: 40px;
+    margin-top: 80px;
+  }
+  .messageWrite input::placeholder{
+    font-size: 8px;
+  }
+
+  .chatlistItem{
+    flex-direction: column;
+    height: 220px;
+  }
+
+  .chatListSide-dark{
+    width: 70px;
+  }
+
+  .chatListSide-light{
+    width: 70px;
+  }
+
+  .chatListSideBlock{
+    width: 60px;
+  }
+
+  .chatlist-dark{
+    margin-left: 50px;
+  }
+
+  .chatlist-light{
+    margin-left: 50px;
+  }
+
+  .openChat{
+    transform: rotate(90deg);
+    margin-bottom: 100px;
+  }
+
+  .actionsBlock{
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .action{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+  }
+
+  .leaveButton-active button{
+    height: 32px;
+    width: 58px;
+    background: #6c7887;
+    color: black;
+    font-size: 11px;
+  }
+
+  .addusers-active{
+    flex-direction: column;
+    height: 110px;
+  }
+  .addusers-active input{
+    height: 50px;
+    width: 27px;
+    border-radius: 10px;
+  }
+
+  .addusers-active button{
+    height: 32px;
+    width: 59px;
+    color: black;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+  
+  .leaveusers-active{
+    flex-direction: column;
+    height: 110px;
+  }
+
+  .leaveusers-active input{
+    height: 50px;
+    width: 27px;
+    border-radius: 10px;
+  }
+
+  .leaveusers-active button{
+    height: 32px;
+    width: 59px;
+    color: black;
+    font-size: 10px;
+    border-radius: 10px;
+  }
 }
